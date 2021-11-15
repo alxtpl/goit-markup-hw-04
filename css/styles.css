@@ -212,12 +212,13 @@ nav,
   border-style: none;
 }
 .baner {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 .bgbaner {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 
   max-width: 1600px;
   height: 600px;
