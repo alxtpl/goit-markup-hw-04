@@ -23,7 +23,7 @@ font-family: 'Roboto', sans-serif; */
   --ninth-text-color: #ececec;
   --tenth-social-color: #afb1b8;
   --eleventh-social-color: rgba(255, 255, 255, 0.1);
-  --twelve-grad-color:rgba(47, 48, 58, 0.4);
+  --twelve-grad-color: rgba(47, 48, 58, 0.4);
 }
 body {
   background-color: var(--second-text-color);
@@ -114,9 +114,13 @@ nav,
   letter-spacing: 0.02em;
 }
 .linkcolor {
+  transition-duration: 500ms;
+
   color: var(--first-text-color);
 }
 .contactcolor {
+  transition-duration: 500ms;
+
   color: var(--third-text-color);
 }
 .logo {
@@ -127,8 +131,12 @@ nav,
 }
 .linkcolor:hover,
 .contactcolor:hover,
+.linkcolor:focus,
+.contactcolor:focus,
 .logoweb,
 .current {
+  transition-duration: 500ms;
+
   color: var(--fourth-text-color);
 }
 /* main */
@@ -154,6 +162,8 @@ nav,
 .studio,
 .portbody button:hover,
 .portbody button:focus {
+  transition-duration: 500ms;
+
   color: var(--second-text-color);
   font-style: normal;
 }
@@ -172,7 +182,6 @@ nav,
   margin-right: auto;
   margin-bottom: 30px;
   padding-top: 200px;
-
 }
 .banerbutton {
   background-color: var(--fourth-text-color);
@@ -202,20 +211,23 @@ nav,
   border-radius: 4px;
   border-style: none;
 }
-.baner{
+.baner {
   display: flex;
-    justify-content: center;
-align-items: center;
- 
+  justify-content: center;
+  align-items: center;
 }
-.bgbaner{
-    justify-content: center;
+.bgbaner {
+  justify-content: center;
 
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
-  background-image: linear-gradient(--);
-    /* background-image: url("../images/bg.jpg") */
-
+  background-image: radial-gradient(
+      at center,
+      var(--twelve-grad-color) 20%,
+      var(--twelve-grad-color) 80%
+    ),
+    url("../images/bg.jpg");
+  /* background-image: url("../images/bg.jpg") */
 }
 /* Highlights */
 .highlights {
@@ -271,7 +283,7 @@ align-items: center;
 }
 /* Team */
 .team {
-  background-color: var(--sixth-text-color);
+  background-color: var(--second-text-color);
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -316,6 +328,8 @@ align-items: center;
   margin-right: 10px;
 }
 .soclink {
+  transition-duration: 500ms;
+
   color: var(--tenth-social-color);
   display: flex;
   justify-content: center;
@@ -328,7 +342,10 @@ align-items: center;
   border-radius: 100%;
   box-shadow: none;
 }
-.soclink:hover {
+.soclink:hover,
+.soclink:focus {
+  transition-duration: 500ms;
+
   color: var(--second-text-color);
   background-color: var(--fourth-text-color);
 }
@@ -356,6 +373,8 @@ align-items: center;
 }
 
 .clientlink {
+  transition-duration: 500ms;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,7 +385,9 @@ align-items: center;
   border-color: var(--tenth-social-color);
   fill: var(--tenth-social-color);
 }
-.clientlink:hover {
+.clientlink:hover,
+.clientlink:focus {
+  transition-duration: 500ms;
   fill: var(--fourth-text-color);
   border-color: var(--fourth-text-color);
 }
@@ -395,6 +416,8 @@ footer {
   flex-direction: column;
 }
 .soclinkfooter {
+  transition-duration: 500ms;
+
   color: var(--tenth-social-color);
   display: flex;
   justify-content: center;
@@ -409,7 +432,9 @@ footer {
   background-color: var(--eleventh-social-color);
   color: var(--second-text-color);
 }
-.soclinkfooter:hover {
+.soclinkfooter:hover,
+.soclinkfooter:focus {
+  transition-duration: 500ms;
   color: var(--second-text-color);
   background-color: var(--fourth-text-color);
 }
@@ -446,6 +471,8 @@ footer {
   margin-right: 8px;
 }
 .portbody button {
+  transition-duration: 500ms;
+
   background-color: var(--sixth-text-color);
   color: var(--first-text-color);
   font-family: Roboto, sans-serif;
@@ -465,8 +492,10 @@ footer {
 }
 .portbody button:hover,
 .portbody button:focus {
+  transition-duration: 500ms;
   background-color: var(--fourth-text-color);
-  box-shadow: 0 4px 2px -1px rgba(172, 186, 198);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .portbody h2 {
   font-weight: 500;
@@ -487,6 +516,8 @@ footer {
 }
 
 .portlist li {
+  transition-duration: 500ms;
+
   padding-left: 0;
   border-style: solid;
   border-width: 1px;
@@ -496,7 +527,13 @@ footer {
   /* width: calc((100% - 60px) / 3)
   calc(100%  / 3 - 30px); */
 }
+.portlist li:hover,
+.portlist li:focus {
+  transition-duration: 500ms;
 
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(22, 15, 15, 0.16);
+}
 .portlist {
   display: flex;
   flex-wrap: wrap;
@@ -541,7 +578,7 @@ footer {
   justify-content: flex-start;
   align-items: center;
 }
-}
+
 .adress {
   margin-top: 20px;
   margin-bottom: 9px;
@@ -553,8 +590,4 @@ footer {
 .containerfooter {
   padding-left: 15px;
   margin-right: 90px;
-}
-.connectsocial {
-  padding-top: 72px;
-  padding-bottom: 100px;
 }
